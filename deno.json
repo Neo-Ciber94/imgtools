@@ -1,0 +1,8 @@
+{
+  "tasks": {
+    "compile": "deno compile -A --unstable --import-map=./import-map.json --output ./build/imgtools.exe src/main.ts",
+    "run": ".\\build\\imgtools.exe",
+    "dev": "deno run --allow-read --allow-write --allow-net --unstable src/main.ts"
+  },
+  "importMap": "./import-map.json"
+}

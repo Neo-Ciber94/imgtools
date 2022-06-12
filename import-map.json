@@ -1,0 +1,9 @@
+{
+  "imports": {
+    "imagescript": "https://deno.land/x/imagescript@v1.2.13/mod.ts",
+    "cliffy/command": "https://deno.land/x/cliffy@v0.24.2/command/mod.ts",
+    "std/fs": "https://deno.land/std@0.110.0/fs/mod.ts",
+    "std/path": "https://deno.land/std@0.141.0/path/mod.ts",
+    "std/fmt/color": "https://deno.land/std@0.140.0/fmt/colors.ts"
+  }
+}
