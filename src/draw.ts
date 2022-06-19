@@ -21,7 +21,7 @@ const draw = new Command()
   .option("-s, --size <width:number> <height:number>", "Size of the box", {
     required: true,
   })
-  .option("-v, --verbose", "Verbose output", { default: false })
+  .option("-v, --verbose [verbose:boolean]", "Verbose output", { default: false })
   .action(
     async ({ size: [width, height], color, name, output, verbose, alpha }) => {
       await ensureDir(output);

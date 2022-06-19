@@ -23,7 +23,7 @@ const crop = new Command()
     default: "img",
   })
   .option("-o, --offset <x:number> <y:number>", "Offset of the crop")
-  .option("-v, --verbose", "Verbose output", { default: false })
+  .option("-v, --verbose [verbose:boolean]", "Verbose output", { default: false })
   .action(async ({ input, output, size, offset = [0, 0], verbose }) => {
     // Ensure the output directory exists
     await ensureDir(output);

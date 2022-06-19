@@ -34,7 +34,7 @@ const resize = new Command()
       default: RESIZE_MODE.auto,
     }
   )
-  .option("-v, --verbose", "Verbose output", { default: false })
+  .option("-v, --verbose [verbose:boolean]", "Verbose output", { default: false })
   .action(async ({ input, output, size, mode, verbose }) => {
     if (
       !Object.values(RESIZE_MODE).includes(mode as keyof typeof RESIZE_MODE)

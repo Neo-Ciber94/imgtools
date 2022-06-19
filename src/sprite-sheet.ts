@@ -34,8 +34,10 @@ const spriteSheet = new Command()
       default: "img",
     }
   )
-  .option("--skip-empty", "Skip empty images", { default: false })
-  .option("-v, --verbose", "Verbose output", { default: false })
+  .option("--skip-empty [skipEmpty:boolean]", "Skip empty images", {
+    default: false,
+  })
+  .option("-v, --verbose [verbose:boolean]", "Verbose output", { default: false })
   .action(
     async ({
       input: imagePath,
@@ -100,7 +102,7 @@ const spriteSheet = new Command()
 
         for (let i = 0; i < width; i++) {
           for (let j = 0; j < height; j++) {
-            const [_r, _g, _b, a] = image.getRGBAAt(i, j);
+            const [_r, _g, _b, a] = image.getRGBAAt(i + 1, j + 1);
 
             if (a > 0) {
               return false;
